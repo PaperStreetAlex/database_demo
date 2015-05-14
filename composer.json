@@ -1,0 +1,13 @@
+{
+    "name": "paperalex/demo",
+    "description": "demo",
+    "authors": [
+        {
+            "name": "PaperStreetAlex",
+            "email": "paperstreetalex@gmail.com"
+        }
+    ],
+    "require": {
+    	"illuminate/database": "4.2.*"
+    }
+}
