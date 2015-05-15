@@ -1,6 +1,6 @@
-<?php
-include 'src/config/start.php'; 
-include 'src/models/User.php';
+<?php 
+	require "vendor/autoload.php";
+	$con = new Acme\Config\Database();
 ?>
 
 <html>
@@ -70,7 +70,7 @@ include 'src/models/User.php';
 				</thead>
 
 <?php
-$user = Users::all();
+$user =  Acme\Models\Users::all();
 foreach($user as $a){
 	echo "<tr><td>".$a->id."<td>".$a->username."<td>".$a->lastname.", ".$a->firstname ." ". $a->middlename[0].". <td><a href='javascript:void(0)' data-toggle='modal' data-target='#myModal' onclick='edit_item(".$a->id.")' class='btn btn-xs btn-default'>Edit</a> <a href='javascript:void(0)' onclick='delete_item(".$a->id.")' class='btn btn-xs btn-default'>Delete</a>";
 } 

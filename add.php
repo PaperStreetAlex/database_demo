@@ -1,9 +1,10 @@
 <?php
-include 'src/config/start.php'; 
-include 'src/models/User.php';
+include 'vendor/autoload.php'; 
+$con = new Acme\Config\Database();
 
 if(isset($_POST['username'])){
-	$user = new Users();
+
+	$user = new Acme\Models\Users();
 	$user->username = $_POST['username'];
 	$user->password = $_POST['password'];
 	$user->lastname = $_POST['lastname'];
@@ -11,6 +12,7 @@ if(isset($_POST['username'])){
 	$user->middlename = $_POST['middlename'];
 	$user->save();
 	header('Location:index.php');
+	
 }
 
 ?>

@@ -9,5 +9,14 @@
     ],
     "require": {
     	"illuminate/database": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/models"
+        ],
+        "psr-4": {
+            "Acme\\": "src/"
+        }
     }
 }
+
